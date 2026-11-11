@@ -1,0 +1,16 @@
+{
+  "$comment": "Machine-readable source of truth for table ownership. Mirrors docs/architecture/module-boundaries.md §3 — ModuleBoundaryTests asserts the two agree, so neither can drift silently.",
+  "modules": {
+    "Identity":      { "tables": ["players", "shops", "steam_accounts"] },
+    "PlayerStores":  { "tables": ["shop_state", "shop_layout_slots"] },
+    "Catalog":       { "tables": ["catalog_items", "catalog_packs"] },
+    "Inventory":     { "tables": ["stock_movements", "stock_locations"] },
+    "Orders":        { "tables": ["orders", "order_events"] },
+    "Ledger":        { "tables": ["ledger_entries", "balance"] },
+    "Collectibles":  { "tables": ["collectibles", "collectible_results"] },
+    "Market":        { "tables": ["demand_pools", "market_weights"] },
+    "Customers":     { "tables": ["npc_customers"] },
+    "Automation":    { "tables": ["staff_rules"] },
+    "Layout":        { "tables": ["grid_tiles"] }
+  }
+}

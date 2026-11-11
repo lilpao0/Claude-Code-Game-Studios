@@ -11,6 +11,26 @@ Brief description of what this PR does.
 - [ ] Documentation improvement
 - [ ] Other:
 
+## Change traceability (game project)
+
+> Required for any PR that touches a game path (`backend/`, `contracts/`,
+> `design/`, `docs/architecture/`, `production/`). Framework-only PRs may
+> write "not applicable — framework only" in any of these fields.
+>
+> Checked by `.github/scripts/check-traceability.sh`. Placeholder values
+> ("TBD", "n/a", "-") count as missing. The FR/TC field needs an FR-, NFR-
+> or TR- id; a TC id on its own does not trace to a requirement.
+
+**Ticket:**
+
+**FR/TC:**
+
+**Changes:**
+
+**Evidence:**
+
+**Reviewer:**
+
 ## Changes
 
 -

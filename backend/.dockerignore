@@ -1,0 +1,15 @@
+# Never bake credentials into an image layer (story 004 AC2). Any file that
+# could hold a real secret stays out of the build context entirely.
+.env*
+**/.env*
+*.pem
+*.key
+
+# Build output and local artifacts.
+**/bin/
+**/obj/
+**/TestResults/
+
+# The test project is not published into the runtime image, so it never
+# needs to be in the build context.
+tests/

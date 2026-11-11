@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <!-- The real-host error-envelope suite (story 008) stands up a Kestrel
+       WebApplication, which needs the ASP.NET Core shared framework — the
+       project itself stays a plain Sdk project. -->
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+    <!-- [SkippableFact] + Skip.IfNot: the live-Postgres test reports as a
+         SKIPPED test when no database is configured, never as a vacuous pass. -->
+    <PackageReference Include="xunit.SkippableFact" Version="1.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The readiness check is a Data-layer type; the integration suite
+         exercises its network-level behaviour and has no reason to pull in
+         the API or Worker hosts. -->
+    <ProjectReference Include="..\..\Data\CurioDistrict.Data.csproj" />
+    <!-- Story 008 (FND-009): the real-host error-envelope integration suite
+         stands up the production API host (its pipeline + health endpoint +
+         test-only responders) and the cross-process Worker dispatch test
+         launches the real Worker binary. Both are host types, so the
+         integration suite references the two hosts it drives. -->
+    <ProjectReference Include="..\..\API\CurioDistrict.API.csproj" />
+    <ProjectReference Include="..\..\Worker\CurioDistrict.Worker.csproj" />
+    <ProjectReference Include="..\..\Tools\ContentValidator\ContentValidator.csproj" />
+  </ItemGroup>
+
+</Project>

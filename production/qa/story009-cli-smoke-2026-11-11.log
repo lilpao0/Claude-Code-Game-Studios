@@ -1,0 +1,18 @@
+SDK=10.0.403
+SOURCE_SHA256=945A18C30ED2E10BF09302CE5FA5DDCF520B7102380141748001995A5E77527F
+BASELINE backend/Config/CurioDistrict.Config/profiles/dev-seed.v0.1.json
+PASS: content set; pools=4; violations=0
+VALID_NATIVE_EXIT=0
+INVALID_SYNTHETIC C:\Users\lilpao0\.codex\automations\theo-d-i-ti-n-claude-m-i-15-ph-t\story009-smoke-c36a7929b960472496cdb2461c99cace\content.json
+FAIL: content set; pools=4; violations=4
+[DuplicateId]
+C:\Users\lilpao0\.codex\automations\theo-d-i-ti-n-claude-m-i-15-ph-t\story009-smoke-c36a7929b960472496cdb2461c99cace\content.json:$.products[0].skuId: Duplicate ID 'BBOX-PHO-01' declared by item at 'C:\Users\lilpao0\.codex\automations\theo-d-i-ti-n-claude-m-i-15-ph-t\story009-smoke-c36a7929b960472496cdb2461c99cace\content.json:$.itemDefinitions[0].definitionId' and SKU at 'C:\Users\lilpao0\.codex\automations\theo-d-i-ti-n-claude-m-i-15-ph-t\story009-smoke-c36a7929b960472496cdb2461c99cace\content.json:$.products[0].skuId'; declarations share one global namespace.
+[PoolWeight]
+C:\Users\lilpao0\.codex\automations\theo-d-i-ti-n-claude-m-i-15-ph-t\story009-smoke-c36a7929b960472496cdb2461c99cace\content.json:$.lootPools[0].rewards: Loot pool 'POOL-PHO-S1' entries [PHO-01, PHO-02, PHO-03, PHO-04, PHO-05, PHO-06, PHO-07, PHO-08] must total exactly 10000, got 18165.
+[Reference]
+C:\Users\lilpao0\.codex\automations\theo-d-i-ti-n-claude-m-i-15-ph-t\story009-smoke-c36a7929b960472496cdb2461c99cace\content.json:$.lootPools[0].rewards[0].definitionId: Loot pool 'POOL-PHO-S1', reward entry 'PHO-01': unresolved item 'PHO-01'.
+C:\Users\lilpao0\.codex\automations\theo-d-i-ti-n-claude-m-i-15-ph-t\story009-smoke-c36a7929b960472496cdb2461c99cace\content.json:$.lootPools[0].sourceSkuId: Loot pool 'POOL-PHO-S1', reward entries [PHO-01, PHO-02, PHO-03, PHO-04, PHO-05, PHO-06, PHO-07, PHO-08]: unresolved SKU 'missing-sku-smoke009'.
+INVALID_NATIVE_EXIT=1
+CORRECTED_SAME_SYNTHETIC_PATH
+PASS: content set; pools=4; violations=0
+CORRECTED_NATIVE_EXIT=0

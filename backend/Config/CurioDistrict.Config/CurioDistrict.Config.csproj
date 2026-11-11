@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RootNamespace>CurioDistrict.Config</RootNamespace>
+  </PropertyGroup>
+
+  <!--
+    Story 006 (FND-006): the DEV_SEED configuration profile project.
+
+    ADR-0004 (modular monolith) + docs/architecture/module-boundaries.md:
+    Config is a leaf that depends on NOTHING (no Domain, no Data, no host).
+    It is reachable FROM Data and API (they may read a versioned profile),
+    but it never reaches into them, and Domain must never reference it —
+    the configuration format is not a Domain concept.
+
+    This file carries NO ProjectReference and NO PackageReference: the
+    loader reads and validates a JSON profile with the BCL only
+    (System.Text.Json), so the profile format stays a config concern.
+  -->
+
+  <ItemGroup>
+    <None Update="profiles/dev-seed.v0.1.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.4" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+    <!-- The in-memory configuration provider the readiness-check test builds
+         its test configuration with. -->
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\CurioDistrict.Domain.csproj" />
+    <ProjectReference Include="..\..\Data\CurioDistrict.Data.csproj" />
+    <ProjectReference Include="..\..\API\CurioDistrict.API.csproj" />
+    <ProjectReference Include="..\..\Worker\CurioDistrict.Worker.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Config\CurioDistrict.Config\CurioDistrict.Config.csproj" />
+    <ProjectReference Include="..\..\Tools\ContentValidator\ContentValidator.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="../../Config/CurioDistrict.Config/profiles/dev-seed.v0.1.json" LogicalName="dev-seed.v0.1.json" />
+    <EmbeddedResource Include="config/fixtures/dev-seed.v0.2.json" LogicalName="dev-seed.v0.2.json" />
+  </ItemGroup>
+</Project>
