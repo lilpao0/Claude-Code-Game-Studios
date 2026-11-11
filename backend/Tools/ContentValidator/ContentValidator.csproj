@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RootNamespace>CurioDistrict.Tools.ContentValidator</RootNamespace>
+  </PropertyGroup>
+
+  <!--
+    Story 009 (FND-010): the standalone content-set validation CLI.
+
+    BCL-only by design (no ProjectReference, no PackageReference): the
+    validator must run in CI on content changes without a Unity install and
+    without depending on the DEV_SEED loader's permissive model, so it
+    parses the documented content schema itself with System.Text.Json.
+  -->
+
+</Project>

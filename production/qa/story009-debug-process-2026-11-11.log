@@ -1,0 +1,28 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  CurioDistrict.Config -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\Config\CurioDistrict.Config\bin\Debug\net10.0\CurioDistrict.Config.dll
+  CurioDistrict.Domain -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\Domain\bin\Debug\net10.0\CurioDistrict.Domain.dll
+  ContentValidator -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\Tools\ContentValidator\bin\Debug\net10.0\ContentValidator.dll
+  CurioDistrict.Data -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\Data\bin\Debug\net10.0\CurioDistrict.Data.dll
+  CurioDistrict.Worker -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\Worker\bin\Debug\net10.0\CurioDistrict.Worker.dll
+  CurioDistrict.API -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\API\bin\Debug\net10.0\CurioDistrict.API.dll
+  CurioDistrict.Tests.Integration -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\integration\bin\Debug\net10.0\CurioDistrict.Tests.Integration.dll
+Test run for C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\integration\bin\Debug\net10.0\CurioDistrict.Tests.Integration.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.14)
+[xUnit.net 00:00:00.37]   Discovering: CurioDistrict.Tests.Integration
+[xUnit.net 00:00:00.49]   Discovered:  CurioDistrict.Tests.Integration
+[xUnit.net 00:00:00.52]   Starting:    CurioDistrict.Tests.Integration
+  Passed CurioDistrict.Tests.Integration.Content.ContentValidatorProcessTests.Invalid_usage_exits_two(args: ["--unknown"]) [217 ms]
+  Passed CurioDistrict.Tests.Integration.Content.ContentValidatorProcessTests.Invalid_usage_exits_two(args: ["--file"]) [97 ms]
+  Passed CurioDistrict.Tests.Integration.Content.ContentValidatorProcessTests.Invalid_usage_exits_two(args: []) [93 ms]
+  Passed CurioDistrict.Tests.Integration.Content.ContentValidatorProcessTests.Unreadable_and_malformed_files_do_not_hide_other_failures [148 ms]
+[xUnit.net 00:00:01.58]   Finished:    CurioDistrict.Tests.Integration
+  Passed CurioDistrict.Tests.Integration.Content.ContentValidatorProcessTests.Multiple_semantic_defects_exit_one_and_all_appear_deterministically [315 ms]
+  Passed CurioDistrict.Tests.Integration.Content.ContentValidatorProcessTests.Valid_content_exits_zero_and_reports_four_pools [135 ms]
+
+Test Run Successful.
+Total tests: 6
+     Passed: 6
+ Total time: 2.6595 Seconds
+DEBUG_PROCESS_NATIVE_EXIT=0

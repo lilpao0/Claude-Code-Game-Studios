@@ -1,0 +1,18 @@
+test_complete_body_is_accepted_by_the_existing_guard (test_pr_checks.TraceabilityEventTests.test_complete_body_is_accepted_by_the_existing_guard) ... ok
+test_missing_ticket_requirement_placeholders_and_tc_only_are_rejected (test_pr_checks.TraceabilityEventTests.test_missing_ticket_requirement_placeholders_and_tc_only_are_rejected) ... ok
+test_pr_shell_syntax_remains_data (test_pr_checks.TraceabilityEventTests.test_pr_shell_syntax_remains_data) ... ok
+test_ambiguous_or_malformed_yaml_never_enables_unity (test_pr_checks.UnityEligibilityTests.test_ambiguous_or_malformed_yaml_never_enables_unity) ... ok
+test_blocked_header_does_not_enable_from_complete_in_body_or_placeholder (test_pr_checks.UnityEligibilityTests.test_blocked_header_does_not_enable_from_complete_in_body_or_placeholder) ... ok
+test_complete_enables_automatically_and_runs_the_exact_fixture_command (test_pr_checks.UnityEligibilityTests.test_complete_enables_automatically_and_runs_the_exact_fixture_command) ... ok
+test_complete_with_unconfigured_smoke_fails_instead_of_skipping (test_pr_checks.UnityEligibilityTests.test_complete_with_unconfigured_smoke_fails_instead_of_skipping) ... ok
+test_configured_command_and_pipeline_nonzero_results_propagate (test_pr_checks.UnityEligibilityTests.test_configured_command_and_pipeline_nonzero_results_propagate) ... ok
+test_invalid_engine_pin_and_editor_settings_fail_before_enabling (test_pr_checks.UnityEligibilityTests.test_invalid_engine_pin_and_editor_settings_fail_before_enabling) ... ok
+test_missing_malformed_unknown_or_duplicate_status_fails_closed (test_pr_checks.UnityEligibilityTests.test_missing_malformed_unknown_or_duplicate_status_fails_closed) ... ok
+test_missing_runner_editor_is_a_failure_not_a_compile_pass (test_pr_checks.UnityEligibilityTests.test_missing_runner_editor_is_a_failure_not_a_compile_pass) ... ok
+test_pr_jobs_are_unfiltered_read_only_and_fail_closed (test_pr_checks.WorkflowShapeTests.test_pr_jobs_are_unfiltered_read_only_and_fail_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 15.906s
+
+OK
+CONFIG_SMOKE_NATIVE_EXIT=0

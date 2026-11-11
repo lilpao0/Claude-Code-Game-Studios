@@ -1,0 +1,831 @@
+{
+  "metadata": {
+    "product": "Curio District",
+    "profileId": "dev_seed_v1",
+    "version": "0.1.0",
+    "status": "DEV_ONLY_NOT_PRODUCTION_BALANCED",
+    "currency": "SHOP_COIN",
+    "weightScale": 10000,
+    "source": "Curio District Google Sheets Content Registry",
+    "notes": [
+      "All art/models referenced here are planned; not delivered FBX files.",
+      "Prices, probabilities and capacities are editable examples for prototype and test.",
+      "Every pool must sum to 10000 before loading; server chooses loot."
+    ]
+  },
+  "economy": {
+    "currency": "ShopCoin",
+    "starting_wallet": 2500,
+    "district_tick_seconds": 120,
+    "district_shops_cap": 20,
+    "district_tick_demand": 6000,
+    "staff_wage_cashier": 15,
+    "staff_wage_restocker": 12,
+    "staff_wage_purchasing": 18,
+    "wallet_min_reserve": 300,
+    "supplier_spend_max_per_tick": 400,
+    "npc_item_resale": false,
+    "PERCENT_LOOT_SUM": 10000
+  },
+  "products": [
+    {
+      "skuId": "BBOX-PHO-01",
+      "kind": "SEALED_BLINDBOX",
+      "seriesId": "PHO",
+      "name": "Phố Mini Mystery Box S1",
+      "supplierCost": 100,
+      "recommendedPrice": 150,
+      "minPrice": 110,
+      "maxPrice": 240,
+      "stackable": true,
+      "poolId": "POOL-PHO-S1",
+      "milestone": "M1"
+    },
+    {
+      "skuId": "BBOX-MAY-01",
+      "kind": "SEALED_BLINDBOX",
+      "seriesId": "MAY",
+      "name": "Mây Nhỏ Mystery Box S1",
+      "supplierCost": 120,
+      "recommendedPrice": 175,
+      "minPrice": 130,
+      "maxPrice": 260,
+      "stackable": true,
+      "poolId": "POOL-MAY-S1",
+      "milestone": "M2"
+    },
+    {
+      "skuId": "BBOX-BYT-01",
+      "kind": "SEALED_BLINDBOX",
+      "seriesId": "BYT",
+      "name": "Byte Buddies Mystery Box S1",
+      "supplierCost": 140,
+      "recommendedPrice": 205,
+      "minPrice": 150,
+      "maxPrice": 300,
+      "stackable": true,
+      "poolId": "POOL-BYT-S1",
+      "milestone": "M2"
+    },
+    {
+      "skuId": "PACK-DMO-01",
+      "kind": "SEALED_CARD_PACK",
+      "seriesId": "DMO",
+      "name": "District Moments Card Pack S1",
+      "supplierCost": 70,
+      "recommendedPrice": 110,
+      "minPrice": 80,
+      "maxPrice": 200,
+      "stackable": true,
+      "poolId": "POOL-DMO-S1",
+      "milestone": "M2"
+    }
+  ],
+  "itemDefinitions": [
+    {
+      "definitionId": "PHO-01",
+      "kind": "FIGURE",
+      "seriesId": "PHO",
+      "displayName": "Cà Phê Cat",
+      "rarity": "COMMON",
+      "prefabId": "Prefabs/Collectibles/PHO/PHO-01",
+      "localizationKey": "item.PHO-01.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "PHO-02",
+      "kind": "FIGURE",
+      "seriesId": "PHO",
+      "displayName": "Rainy Duck",
+      "rarity": "COMMON",
+      "prefabId": "Prefabs/Collectibles/PHO/PHO-02",
+      "localizationKey": "item.PHO-02.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "PHO-03",
+      "kind": "FIGURE",
+      "seriesId": "PHO",
+      "displayName": "Lantern Fox",
+      "rarity": "COMMON",
+      "prefabId": "Prefabs/Collectibles/PHO/PHO-03",
+      "localizationKey": "item.PHO-03.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "PHO-04",
+      "kind": "FIGURE",
+      "seriesId": "PHO",
+      "displayName": "Skate Gecko",
+      "rarity": "UNCOMMON",
+      "prefabId": "Prefabs/Collectibles/PHO/PHO-04",
+      "localizationKey": "item.PHO-04.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "PHO-05",
+      "kind": "FIGURE",
+      "seriesId": "PHO",
+      "displayName": "Bánh Cart Bunny",
+      "rarity": "UNCOMMON",
+      "prefabId": "Prefabs/Collectibles/PHO/PHO-05",
+      "localizationKey": "item.PHO-05.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "PHO-06",
+      "kind": "FIGURE",
+      "seriesId": "PHO",
+      "displayName": "Alley Racer",
+      "rarity": "RARE",
+      "prefabId": "Prefabs/Collectibles/PHO/PHO-06",
+      "localizationKey": "item.PHO-06.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "PHO-07",
+      "kind": "FIGURE",
+      "seriesId": "PHO",
+      "displayName": "Neon Lantern Cat",
+      "rarity": "EPIC",
+      "prefabId": "Prefabs/Collectibles/PHO/PHO-07",
+      "localizationKey": "item.PHO-07.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "PHO-08",
+      "kind": "FIGURE",
+      "seriesId": "PHO",
+      "displayName": "Golden Night Vendor",
+      "rarity": "SECRET",
+      "prefabId": "Prefabs/Collectibles/PHO/PHO-08",
+      "localizationKey": "item.PHO-08.name",
+      "presentation": "SECRET SHOWPIECE"
+    },
+    {
+      "definitionId": "MAY-01",
+      "kind": "FIGURE",
+      "seriesId": "MAY",
+      "displayName": "Cloud Puff",
+      "rarity": "COMMON",
+      "prefabId": "Prefabs/Collectibles/MAY/MAY-01",
+      "localizationKey": "item.MAY-01.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "MAY-02",
+      "kind": "FIGURE",
+      "seriesId": "MAY",
+      "displayName": "Star Sleeper",
+      "rarity": "COMMON",
+      "prefabId": "Prefabs/Collectibles/MAY/MAY-02",
+      "localizationKey": "item.MAY-02.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "MAY-03",
+      "kind": "FIGURE",
+      "seriesId": "MAY",
+      "displayName": "Breeze Pup",
+      "rarity": "COMMON",
+      "prefabId": "Prefabs/Collectibles/MAY/MAY-03",
+      "localizationKey": "item.MAY-03.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "MAY-04",
+      "kind": "FIGURE",
+      "seriesId": "MAY",
+      "displayName": "Dew Frog",
+      "rarity": "UNCOMMON",
+      "prefabId": "Prefabs/Collectibles/MAY/MAY-04",
+      "localizationKey": "item.MAY-04.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "MAY-05",
+      "kind": "FIGURE",
+      "seriesId": "MAY",
+      "displayName": "Sun Kite",
+      "rarity": "UNCOMMON",
+      "prefabId": "Prefabs/Collectibles/MAY/MAY-05",
+      "localizationKey": "item.MAY-05.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "MAY-06",
+      "kind": "FIGURE",
+      "seriesId": "MAY",
+      "displayName": "Moon Baker",
+      "rarity": "RARE",
+      "prefabId": "Prefabs/Collectibles/MAY/MAY-06",
+      "localizationKey": "item.MAY-06.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "MAY-07",
+      "kind": "FIGURE",
+      "seriesId": "MAY",
+      "displayName": "Storm Gardener",
+      "rarity": "EPIC",
+      "prefabId": "Prefabs/Collectibles/MAY/MAY-07",
+      "localizationKey": "item.MAY-07.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "MAY-08",
+      "kind": "FIGURE",
+      "seriesId": "MAY",
+      "displayName": "Dawn Keeper",
+      "rarity": "SECRET",
+      "prefabId": "Prefabs/Collectibles/MAY/MAY-08",
+      "localizationKey": "item.MAY-08.name",
+      "presentation": "SECRET SHOWPIECE"
+    },
+    {
+      "definitionId": "BYT-01",
+      "kind": "FIGURE",
+      "seriesId": "BYT",
+      "displayName": "Bitty 01",
+      "rarity": "COMMON",
+      "prefabId": "Prefabs/Collectibles/BYT/BYT-01",
+      "localizationKey": "item.BYT-01.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "BYT-02",
+      "kind": "FIGURE",
+      "seriesId": "BYT",
+      "displayName": "Pluggo",
+      "rarity": "COMMON",
+      "prefabId": "Prefabs/Collectibles/BYT/BYT-02",
+      "localizationKey": "item.BYT-02.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "BYT-03",
+      "kind": "FIGURE",
+      "seriesId": "BYT",
+      "displayName": "Zip-Zap",
+      "rarity": "COMMON",
+      "prefabId": "Prefabs/Collectibles/BYT/BYT-03",
+      "localizationKey": "item.BYT-03.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "BYT-04",
+      "kind": "FIGURE",
+      "seriesId": "BYT",
+      "displayName": "Patch Pal",
+      "rarity": "UNCOMMON",
+      "prefabId": "Prefabs/Collectibles/BYT/BYT-04",
+      "localizationKey": "item.BYT-04.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "BYT-05",
+      "kind": "FIGURE",
+      "seriesId": "BYT",
+      "displayName": "Tape Runner",
+      "rarity": "UNCOMMON",
+      "prefabId": "Prefabs/Collectibles/BYT/BYT-05",
+      "localizationKey": "item.BYT-05.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "BYT-06",
+      "kind": "FIGURE",
+      "seriesId": "BYT",
+      "displayName": "Pixel Pilot",
+      "rarity": "RARE",
+      "prefabId": "Prefabs/Collectibles/BYT/BYT-06",
+      "localizationKey": "item.BYT-06.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "BYT-07",
+      "kind": "FIGURE",
+      "seriesId": "BYT",
+      "displayName": "Laser Garden",
+      "rarity": "EPIC",
+      "prefabId": "Prefabs/Collectibles/BYT/BYT-07",
+      "localizationKey": "item.BYT-07.name",
+      "presentation": "STANDARD"
+    },
+    {
+      "definitionId": "BYT-08",
+      "kind": "FIGURE",
+      "seriesId": "BYT",
+      "displayName": "Circuit Monarch",
+      "rarity": "SECRET",
+      "prefabId": "Prefabs/Collectibles/BYT/BYT-08",
+      "localizationKey": "item.BYT-08.name",
+      "presentation": "SECRET SHOWPIECE"
+    },
+    {
+      "definitionId": "DMO-01",
+      "kind": "CARD",
+      "seriesId": "DMO",
+      "displayName": "Morning Stock",
+      "rarity": "COMMON",
+      "prefabId": "Prefabs/Cards/DMO-01",
+      "localizationKey": "item.DMO-01.name",
+      "presentation": "CARD ART"
+    },
+    {
+      "definitionId": "DMO-02",
+      "kind": "CARD",
+      "seriesId": "DMO",
+      "displayName": "First Sale",
+      "rarity": "COMMON",
+      "prefabId": "Prefabs/Cards/DMO-02",
+      "localizationKey": "item.DMO-02.name",
+      "presentation": "CARD ART"
+    },
+    {
+      "definitionId": "DMO-03",
+      "kind": "CARD",
+      "seriesId": "DMO",
+      "displayName": "Rain on Market",
+      "rarity": "COMMON",
+      "prefabId": "Prefabs/Cards/DMO-03",
+      "localizationKey": "item.DMO-03.name",
+      "presentation": "CARD ART"
+    },
+    {
+      "definitionId": "DMO-04",
+      "kind": "CARD",
+      "seriesId": "DMO",
+      "displayName": "Café Break",
+      "rarity": "COMMON",
+      "prefabId": "Prefabs/Cards/DMO-04",
+      "localizationKey": "item.DMO-04.name",
+      "presentation": "CARD ART"
+    },
+    {
+      "definitionId": "DMO-05",
+      "kind": "CARD",
+      "seriesId": "DMO",
+      "displayName": "Shelf Full",
+      "rarity": "COMMON",
+      "prefabId": "Prefabs/Cards/DMO-05",
+      "localizationKey": "item.DMO-05.name",
+      "presentation": "CARD ART"
+    },
+    {
+      "definitionId": "DMO-06",
+      "kind": "CARD",
+      "seriesId": "DMO",
+      "displayName": "Collector Queue",
+      "rarity": "UNCOMMON",
+      "prefabId": "Prefabs/Cards/DMO-06",
+      "localizationKey": "item.DMO-06.name",
+      "presentation": "CARD ART"
+    },
+    {
+      "definitionId": "DMO-07",
+      "kind": "CARD",
+      "seriesId": "DMO",
+      "displayName": "Neon Window",
+      "rarity": "UNCOMMON",
+      "prefabId": "Prefabs/Cards/DMO-07",
+      "localizationKey": "item.DMO-07.name",
+      "presentation": "CARD ART"
+    },
+    {
+      "definitionId": "DMO-08",
+      "kind": "CARD",
+      "seriesId": "DMO",
+      "displayName": "Evening Restock",
+      "rarity": "UNCOMMON",
+      "prefabId": "Prefabs/Cards/DMO-08",
+      "localizationKey": "item.DMO-08.name",
+      "presentation": "CARD ART"
+    },
+    {
+      "definitionId": "DMO-09",
+      "kind": "CARD",
+      "seriesId": "DMO",
+      "displayName": "Robot Parade",
+      "rarity": "RARE",
+      "prefabId": "Prefabs/Cards/DMO-09",
+      "localizationKey": "item.DMO-09.name",
+      "presentation": "CARD ART"
+    },
+    {
+      "definitionId": "DMO-10",
+      "kind": "CARD",
+      "seriesId": "DMO",
+      "displayName": "Sky Festival",
+      "rarity": "RARE",
+      "prefabId": "Prefabs/Cards/DMO-10",
+      "localizationKey": "item.DMO-10.name",
+      "presentation": "CARD ART"
+    },
+    {
+      "definitionId": "DMO-11",
+      "kind": "CARD",
+      "seriesId": "DMO",
+      "displayName": "Golden Receipt",
+      "rarity": "EPIC",
+      "prefabId": "Prefabs/Cards/DMO-11",
+      "localizationKey": "item.DMO-11.name",
+      "presentation": "CARD ART"
+    },
+    {
+      "definitionId": "DMO-12",
+      "kind": "CARD",
+      "seriesId": "DMO",
+      "displayName": "Midnight District",
+      "rarity": "SECRET",
+      "prefabId": "Prefabs/Cards/DMO-12",
+      "localizationKey": "item.DMO-12.name",
+      "presentation": "SECRET FOIL"
+    }
+  ],
+  "lootPools": [
+    {
+      "poolId": "POOL-PHO-S1",
+      "version": "v1",
+      "sourceSkuId": "BBOX-PHO-01",
+      "totalWeightExpected": 10000,
+      "rewards": [
+        {
+          "definitionId": "PHO-01",
+          "rarity": "COMMON",
+          "weight": 1834
+        },
+        {
+          "definitionId": "PHO-02",
+          "rarity": "COMMON",
+          "weight": 1833
+        },
+        {
+          "definitionId": "PHO-03",
+          "rarity": "COMMON",
+          "weight": 1833
+        },
+        {
+          "definitionId": "PHO-04",
+          "rarity": "UNCOMMON",
+          "weight": 1400
+        },
+        {
+          "definitionId": "PHO-05",
+          "rarity": "UNCOMMON",
+          "weight": 1400
+        },
+        {
+          "definitionId": "PHO-06",
+          "rarity": "RARE",
+          "weight": 1200
+        },
+        {
+          "definitionId": "PHO-07",
+          "rarity": "EPIC",
+          "weight": 400
+        },
+        {
+          "definitionId": "PHO-08",
+          "rarity": "SECRET",
+          "weight": 100
+        }
+      ]
+    },
+    {
+      "poolId": "POOL-MAY-S1",
+      "version": "v1",
+      "sourceSkuId": "BBOX-MAY-01",
+      "totalWeightExpected": 10000,
+      "rewards": [
+        {
+          "definitionId": "MAY-01",
+          "rarity": "COMMON",
+          "weight": 1834
+        },
+        {
+          "definitionId": "MAY-02",
+          "rarity": "COMMON",
+          "weight": 1833
+        },
+        {
+          "definitionId": "MAY-03",
+          "rarity": "COMMON",
+          "weight": 1833
+        },
+        {
+          "definitionId": "MAY-04",
+          "rarity": "UNCOMMON",
+          "weight": 1400
+        },
+        {
+          "definitionId": "MAY-05",
+          "rarity": "UNCOMMON",
+          "weight": 1400
+        },
+        {
+          "definitionId": "MAY-06",
+          "rarity": "RARE",
+          "weight": 1200
+        },
+        {
+          "definitionId": "MAY-07",
+          "rarity": "EPIC",
+          "weight": 400
+        },
+        {
+          "definitionId": "MAY-08",
+          "rarity": "SECRET",
+          "weight": 100
+        }
+      ]
+    },
+    {
+      "poolId": "POOL-BYT-S1",
+      "version": "v1",
+      "sourceSkuId": "BBOX-BYT-01",
+      "totalWeightExpected": 10000,
+      "rewards": [
+        {
+          "definitionId": "BYT-01",
+          "rarity": "COMMON",
+          "weight": 1834
+        },
+        {
+          "definitionId": "BYT-02",
+          "rarity": "COMMON",
+          "weight": 1833
+        },
+        {
+          "definitionId": "BYT-03",
+          "rarity": "COMMON",
+          "weight": 1833
+        },
+        {
+          "definitionId": "BYT-04",
+          "rarity": "UNCOMMON",
+          "weight": 1400
+        },
+        {
+          "definitionId": "BYT-05",
+          "rarity": "UNCOMMON",
+          "weight": 1400
+        },
+        {
+          "definitionId": "BYT-06",
+          "rarity": "RARE",
+          "weight": 1200
+        },
+        {
+          "definitionId": "BYT-07",
+          "rarity": "EPIC",
+          "weight": 400
+        },
+        {
+          "definitionId": "BYT-08",
+          "rarity": "SECRET",
+          "weight": 100
+        }
+      ]
+    },
+    {
+      "poolId": "POOL-DMO-S1",
+      "version": "v1",
+      "sourceSkuId": "PACK-DMO-01",
+      "totalWeightExpected": 10000,
+      "rewards": [
+        {
+          "definitionId": "DMO-01",
+          "rarity": "COMMON",
+          "weight": 1100
+        },
+        {
+          "definitionId": "DMO-02",
+          "rarity": "COMMON",
+          "weight": 1100
+        },
+        {
+          "definitionId": "DMO-03",
+          "rarity": "COMMON",
+          "weight": 1100
+        },
+        {
+          "definitionId": "DMO-04",
+          "rarity": "COMMON",
+          "weight": 1100
+        },
+        {
+          "definitionId": "DMO-05",
+          "rarity": "COMMON",
+          "weight": 1100
+        },
+        {
+          "definitionId": "DMO-06",
+          "rarity": "UNCOMMON",
+          "weight": 933
+        },
+        {
+          "definitionId": "DMO-07",
+          "rarity": "UNCOMMON",
+          "weight": 933
+        },
+        {
+          "definitionId": "DMO-08",
+          "rarity": "UNCOMMON",
+          "weight": 934
+        },
+        {
+          "definitionId": "DMO-09",
+          "rarity": "RARE",
+          "weight": 600
+        },
+        {
+          "definitionId": "DMO-10",
+          "rarity": "RARE",
+          "weight": 600
+        },
+        {
+          "definitionId": "DMO-11",
+          "rarity": "EPIC",
+          "weight": 400
+        },
+        {
+          "definitionId": "DMO-12",
+          "rarity": "SECRET",
+          "weight": 100
+        }
+      ]
+    }
+  ],
+  "fixtures": [
+    {
+      "fixtureId": "FX-SHF-01",
+      "displayName": "Basic Shelf",
+      "grid": {
+        "w": 2,
+        "h": 1
+      },
+      "capacitySeed": 6,
+      "compatibleType": "SEALED_BLINDBOX",
+      "firstStage": "M0"
+    },
+    {
+      "fixtureId": "FX-SHF-02",
+      "displayName": "Extended Shelf",
+      "grid": {
+        "w": 2,
+        "h": 1
+      },
+      "capacitySeed": 12,
+      "compatibleType": "SEALED_BLINDBOX",
+      "firstStage": "M2"
+    },
+    {
+      "fixtureId": "FX-RACK-01",
+      "displayName": "Card Rack",
+      "grid": {
+        "w": 1,
+        "h": 1
+      },
+      "capacitySeed": 10,
+      "compatibleType": "SEALED_CARD_PACK",
+      "firstStage": "M2"
+    },
+    {
+      "fixtureId": "FX-WH-01",
+      "displayName": "Warehouse Rack",
+      "grid": {
+        "w": 2,
+        "h": 1
+      },
+      "capacitySeed": 24,
+      "compatibleType": "STACKABLE_STOCK",
+      "firstStage": "M1"
+    },
+    {
+      "fixtureId": "FX-CASE-01",
+      "displayName": "Glass Showcase",
+      "grid": {
+        "w": 2,
+        "h": 1
+      },
+      "capacitySeed": 3,
+      "compatibleType": "UNIQUE_ITEM_LOCKED",
+      "firstStage": "M1"
+    },
+    {
+      "fixtureId": "FX-REG-01",
+      "displayName": "Cash Register",
+      "grid": {
+        "w": 2,
+        "h": 1
+      },
+      "capacitySeed": 1,
+      "compatibleType": "CHECKOUT",
+      "firstStage": "M1"
+    },
+    {
+      "fixtureId": "FX-LAMP-01",
+      "displayName": "Accent Lamp",
+      "grid": {
+        "w": 1,
+        "h": 1
+      },
+      "capacitySeed": 0,
+      "compatibleType": "DECOR",
+      "firstStage": "M2"
+    },
+    {
+      "fixtureId": "FX-SIGN-01",
+      "displayName": "Shopfront Sign",
+      "grid": {
+        "w": 2,
+        "h": 1
+      },
+      "capacitySeed": 0,
+      "compatibleType": "WALL_DECOR",
+      "firstStage": "M2"
+    },
+    {
+      "fixtureId": "FX-DECOR-01",
+      "displayName": "Plant Pot",
+      "grid": {
+        "w": 1,
+        "h": 1
+      },
+      "capacitySeed": 0,
+      "compatibleType": "DECOR",
+      "firstStage": "M2"
+    },
+    {
+      "fixtureId": "FX-DECOR-02",
+      "displayName": "Poster Wall",
+      "grid": {
+        "w": 1,
+        "h": 1
+      },
+      "capacitySeed": 0,
+      "compatibleType": "WALL_DECOR",
+      "firstStage": "M2"
+    }
+  ],
+  "npcModels": [
+    {
+      "modelId": "NPC-BUD-01",
+      "type": "CUSTOMER",
+      "archetype": "Budget Shopper",
+      "description": "Low price tolerance; short browsing",
+      "milestone": "M1"
+    },
+    {
+      "modelId": "NPC-FAN-01",
+      "type": "CUSTOMER",
+      "archetype": "Series Fan",
+      "description": "Matching collectible line; display influence",
+      "milestone": "M1"
+    },
+    {
+      "modelId": "NPC-COL-01",
+      "type": "CUSTOMER",
+      "archetype": "Collector",
+      "description": "Premium tolerances; limited budget",
+      "milestone": "M2"
+    },
+    {
+      "modelId": "NPC-CAS-01",
+      "type": "CUSTOMER",
+      "archetype": "Casual Buyer",
+      "description": "Convenience-driven",
+      "milestone": "M2"
+    },
+    {
+      "modelId": "NPC-TRN-01",
+      "type": "CUSTOMER",
+      "archetype": "Trend Hunter",
+      "description": "Follows district product trend",
+      "milestone": "M2"
+    },
+    {
+      "modelId": "EMP-CASH-01",
+      "type": "EMPLOYEE",
+      "archetype": "Cashier",
+      "description": "Claim and complete eligible orders",
+      "milestone": "M2"
+    },
+    {
+      "modelId": "EMP-REST-01",
+      "type": "EMPLOYEE",
+      "archetype": "Restocker",
+      "description": "Move real stock warehouse → shelf",
+      "milestone": "M2"
+    },
+    {
+      "modelId": "EMP-PROC-01",
+      "type": "EMPLOYEE",
+      "archetype": "Purchasing Clerk",
+      "description": "Buy supplier within rules/budget",
+      "milestone": "M2"
+    }
+  ],
+  "configVersion": "0.1"
+}

@@ -1,0 +1,96 @@
+# Local stack: Postgres + API + Worker (story 004, FND-004).
+#
+# Every credential is an environment reference with NO default value. The
+# reference uses compose's `:?` form (`${VAR:?message}`), which makes compose
+# FAIL FAST at parse time when the variable is unset. A plain `${VAR}` would
+# not: compose substitutes an empty string and starts the stack with a blank
+# password. There is no literal secret anywhere in this repository:
+# supply the variables from your shell, or copy the committed `.env.example`
+# template to `.env` and fill it in — `.env` is git-ignored and must never be
+# committed. The template's values are empty on purpose.
+#
+#   export POSTGRES_DB=curiodistrict
+#   export POSTGRES_USER=curiodistrict
+#   export POSTGRES_PASSWORD='<a real password>'
+#   export DATABASE_CONNECTION_STRING="Host=postgres;Port=5432;Database=$POSTGRES_DB;Username=$POSTGRES_USER;Password=$POSTGRES_PASSWORD"
+#   export API_PORT=8080
+#   export ASPNETCORE_ENVIRONMENT=Development
+#   docker compose up -d
+#   curl http://localhost:8080/health
+
+name: curiodistrict
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:?POSTGRES_DB is required}
+      POSTGRES_USER: ${POSTGRES_USER:?POSTGRES_USER is required}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      # `pg_isready` checks server availability. The API's separate readiness
+      # check opens its configured database connection and executes SELECT 1.
+      test: ["CMD-SHELL", "pg_isready -U \"$$POSTGRES_USER\" -d \"$$POSTGRES_DB\""]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app/api
+    command: ["CurioDistrict.API.dll"]
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:?ASPNETCORE_ENVIRONMENT is required}
+      ConnectionStrings__CurioDistrict: ${DATABASE_CONNECTION_STRING:?DATABASE_CONNECTION_STRING is required}
+    depends_on:
+      postgres:
+        # Compose ordering alone is not the guarantee: the API's own
+        # healthcheck is what gates "healthy", and it fails until Postgres
+        # accepts connections.
+        condition: service_healthy
+    ports:
+      - "${API_PORT:?API_PORT is required}:8080"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:8080/health || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 15s
+    restart: unless-stopped
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app/worker
+    command: ["CurioDistrict.Worker.dll"]
+    environment:
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:?ASPNETCORE_ENVIRONMENT is required}
+      ConnectionStrings__CurioDistrict: ${DATABASE_CONNECTION_STRING:?DATABASE_CONNECTION_STRING is required}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      # The worker has no port to probe — it is a background process. Its
+      # liveness is the process itself: PID 1 in the container IS the worker
+      # host (the image's ENTRYPOINT is `dotnet`, the command is the dll).
+      # `kill -0 1` succeeds only while that process is alive and does not
+      # need `procps` in the image. If the worker crashes, PID 1 dies, the
+      # container stops, and this check reports the container as unhealthy
+      # rather than leaving it silently "running".
+      test: ["CMD-SHELL", "kill -0 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 15s
+    restart: unless-stopped
+
+volumes:
+  postgres-data:

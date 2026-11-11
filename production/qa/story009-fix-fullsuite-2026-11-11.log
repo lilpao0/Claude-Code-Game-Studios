@@ -1,0 +1,262 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  CurioDistrict.Config -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\Config\CurioDistrict.Config\bin\Release\net10.0\CurioDistrict.Config.dll
+  CurioDistrict.Domain -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\Domain\bin\Release\net10.0\CurioDistrict.Domain.dll
+  ContentValidator -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\Tools\ContentValidator\bin\Release\net10.0\ContentValidator.dll
+  CurioDistrict.Worker -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\Worker\bin\Release\net10.0\CurioDistrict.Worker.dll
+  CurioDistrict.Data -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\Data\bin\Release\net10.0\CurioDistrict.Data.dll
+  CurioDistrict.API -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\API\bin\Release\net10.0\CurioDistrict.API.dll
+  CurioDistrict.Tests.Integration -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\integration\bin\Release\net10.0\CurioDistrict.Tests.Integration.dll
+  CurioDistrict.Tests.Unit -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\bin\Release\net10.0\CurioDistrict.Tests.Unit.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.90
+BUILD_NATIVE_EXIT=0
+Test run for C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\bin\Release\net10.0\CurioDistrict.Tests.Unit.dll (.NETCoreApp,Version=v10.0)
+Test run for C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\integration\bin\Release\net10.0\CurioDistrict.Tests.Integration.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.14)
+[xUnit.net 00:00:00.11]   Discovering: CurioDistrict.Tests.Unit
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.14)
+[xUnit.net 00:00:00.18]   Discovered:  CurioDistrict.Tests.Unit
+[xUnit.net 00:00:00.23]   Starting:    CurioDistrict.Tests.Unit
+  Passed CurioDistrict.Tests.Unit.Fnd.ComposeStackTests.The_image_bakes_no_credential_into_a_layer [117 ms]
+  Passed CurioDistrict.Tests.Unit.Domain.PortsDeterminismTests.Typed_ids_expose_no_implicit_conversions_and_no_generation [118 ms]
+  Passed CurioDistrict.Tests.Unit.Fnd.ComposeStackTests.The_api_waits_for_postgres_to_be_healthy [4 ms]
+  Passed CurioDistrict.Tests.Unit.Fnd.ComposeStackTests.The_api_healthcheck_calls_the_endpoint_the_api_serves [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Fnd.ComposeStackTests.No_credential_value_is_written_literally [4 ms]
+  Passed CurioDistrict.Tests.Unit.Fnd.ComposeStackTests.Every_required_variable_fails_fast_when_unset [1 ms]
+  Passed CurioDistrict.Tests.Unit.Fnd.ComposeStackTests.The_dockerignore_keeps_credential_files_out_of_the_build_context [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Fnd.ComposeStackTests.Every_service_declares_a_healthcheck [1 ms]
+  Passed CurioDistrict.Tests.Unit.Fnd.ComposeStackTests.The_stack_declares_its_three_services [2 ms]
+  Passed CurioDistrict.Tests.Unit.Fnd.ModuleBoundaryTests.Domain_references_nothing_but_the_BCL [138 ms]
+[xUnit.net 00:00:00.42]   Discovering: CurioDistrict.Tests.Integration
+  Passed CurioDistrict.Tests.Unit.Fnd.ComposeStackTests.Every_credential_is_an_environment_reference_without_a_default [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Fnd.ModuleBoundaryTests.Project_reference_edges_match_the_allowed_table [4 ms]
+  Passed CurioDistrict.Tests.Unit.Domain.PortsDeterminismTests.Domain_source_contains_no_ambient_time_randomness_or_transaction [36 ms]
+  Passed CurioDistrict.Tests.Unit.Domain.PortsDeterminismTests.The_purity_scanner_bridges_a_comment_spliced_between_tokens [1 ms]
+  Passed CurioDistrict.Tests.Unit.Domain.PortsDeterminismTests.A_frozen_clock_yields_identical_instants_across_runs [22 ms]
+  Passed CurioDistrict.Tests.Unit.Domain.PortsDeterminismTests.An_explicit_guid_round_trip_is_the_only_raw_path [6 ms]
+  Passed CurioDistrict.Tests.Unit.Fnd.PostgresReadinessCheckTests.The_check_probes_the_connection_string_the_compose_file_supplies [297 ms]
+  Passed CurioDistrict.Tests.Unit.Fnd.ModuleBoundaryTests.Data_table_writes_stay_inside_the_owning_module [154 ms]
+  Passed CurioDistrict.Tests.Unit.Fnd.BoundaryDocumentTests.Table_ownership_document_matches_the_enforced_ownership_map [299 ms]
+  Passed CurioDistrict.Tests.Unit.Fnd.BoundaryDocumentTests.Every_edge_citation_names_a_rule_present_in_the_control_manifest [1 ms]
+  Passed CurioDistrict.Tests.Unit.Fnd.BoundaryDocumentTests.Boundary_document_exists_and_names_the_governing_adr [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Fnd.BoundaryDocumentTests.Every_project_edge_is_listed_exactly_once [2 ms]
+  Passed CurioDistrict.Tests.Unit.Fnd.PostgresReadinessCheckTests.A_blank_connection_string_is_unhealthy_with_the_no_configuration_result [43 ms]
+  Passed CurioDistrict.Tests.Unit.Fnd.PostgresReadinessCheckTests.A_missing_connection_string_is_unhealthy_with_the_no_configuration_result [1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Weight_accumulation_overflow_is_controlled_and_does_not_hide_other_defects [371 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Missing_or_fifth_pool_is_rejected(count: 5) [1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Missing_or_fifth_pool_is_rejected(count: 3) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Bad_document_does_not_hide_other_document_defects [2 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Malformed_or_unsupported_input_never_silently_passes(json: "null") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Malformed_or_unsupported_input_never_silently_passes(json: "[]") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Malformed_or_unsupported_input_never_silently_passes(json: "{\"unknownReferences\":[\"missing\"]}") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Malformed_or_unsupported_input_never_silently_passes(json: "{\"itemDefinitions\":[{\"definitionId\":\"a\",\"re"···) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Malformed_or_unsupported_input_never_silently_passes(json: "{\"itemDefinitions\":[null]}") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Malformed_or_unsupported_input_never_silently_passes(json: "{\"itemDefinitions\":[{\"definitionId\":\"a\",\"ou"···) [5 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Malformed_or_unsupported_input_never_silently_passes(json: "{") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Domain.PortsDeterminismTests.Two_state_isolated_runs_with_seeded_inputs_are_identical [195 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.A_downstream_status_only_503_that_writes_a_body_is_normalized_to_the_envelope [385 ms]
+  Passed CurioDistrict.Tests.Unit.Domain.PortsDeterminismTests.Ambient_unseeded_randomness_breaks_determinism [1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Malformed_or_unsupported_input_never_silently_passes(json: "{\"itemDefinitions\":[{\"definitionId\":5}]}") [1 ms]
+  Passed CurioDistrict.Tests.Unit.Domain.PortsDeterminismTests.The_purity_scanner_ignores_prose_mentions_in_comments [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Malformed_or_unsupported_input_never_silently_passes(json: "{\"lootPools\":null}") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.A_downstream_status_only_error_is_normalized_to_its_table_code(status: 403) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.A_downstream_status_only_error_is_normalized_to_its_table_code(status: 409) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.A_downstream_status_only_error_is_normalized_to_its_table_code(status: 401) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.A_downstream_status_only_error_is_normalized_to_its_table_code(status: 400) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.A_downstream_status_only_error_is_normalized_to_its_table_code(status: 503) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.A_downstream_status_only_error_is_normalized_to_its_table_code(status: 422) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Every_declaration_collection_checks_its_identifier(collection: "itemDefinitions", field: "definitionId") [1 ms]
+  Passed CurioDistrict.Tests.Unit.Domain.PortsDeterminismTests.The_purity_scanner_detects_spaced_and_fully_qualified_forms [1 ms]
+  Passed CurioDistrict.Tests.Unit.Domain.PortsDeterminismTests.The_rng_contract_rejects_a_non_positive_bound [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Every_declaration_collection_checks_its_identifier(collection: "fixtures", field: "fixtureId") [1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Every_declaration_collection_checks_its_identifier(collection: "lootPools", field: "poolId") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Every_declaration_collection_checks_its_identifier(collection: "products", field: "skuId") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Worker.WorkerDispatchAc4Tests.An_unknown_work_type_is_logged_not_thrown [389 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Every_declaration_collection_checks_its_identifier(collection: "npcModels", field: "modelId") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.An_unsafe_correlation_header_is_replaced_with_a_generated_id(supplied: "bad\r\nInjected: true") [3 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.An_unsafe_correlation_header_is_replaced_with_a_generated_id(supplied: "bad id") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.An_unsafe_correlation_header_is_replaced_with_a_generated_id(supplied: "non-ascii-é") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Same_file_duplicate_identifies_both_declarations [2 ms]
+  Passed CurioDistrict.Tests.Unit.Worker.WorkerDispatchAc4Tests.The_worker_handler_runs_inside_the_correlation_scope [3 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.An_inbound_correlation_id_is_echoed_in_header_and_envelope [2 ms]
+  Passed CurioDistrict.Tests.Unit.Worker.WorkerDispatchAc4Tests.A_serialized_payload_round_trips_every_field_across_the_boundary [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Every_reference_family_resolves_across_files [2 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.Every_documented_error_status_returns_the_same_envelope_shape(status: 503) [1 ms]
+  Passed CurioDistrict.Tests.Unit.Worker.WorkerDispatchAc4Tests.The_worker_dispatch_of_an_api_outbox_payload_logs_the_api_correlation_id [1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.Every_documented_error_status_returns_the_same_envelope_shape(status: 401) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.Every_documented_error_status_returns_the_same_envelope_shape(status: 409) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.Every_documented_error_status_returns_the_same_envelope_shape(status: 422) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.Every_documented_error_status_returns_the_same_envelope_shape(status: 400) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.Every_documented_error_status_returns_the_same_envelope_shape(status: 403) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.A_work_record_carries_the_correlation_id_the_worker_logs_with [1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.All_documented_errors_share_one_envelope_key_set [5 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.The_health_200_answer_keeps_story_004s_plain_text_contract [3 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.The_health_503_answer_is_the_documented_envelope [1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.The_health_503_without_middleware_mints_a_correlation_id_itself [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.A_missing_inbound_correlation_id_is_generated_and_echoed [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.All_defects_are_grouped_and_order_is_source_and_culture_independent [15 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.A_blank_inbound_correlation_id_is_generated_and_echoed [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Invalid_total_names_the_pool_and_observed_total(total: 10001) [1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Null_required_member_is_a_validation_error_not_a_null_reference(field: "metadata") [416 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Invalid_total_names_the_pool_and_observed_total(total: 9999) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Missing_empty_or_whitespace_declaration_is_rejected(id: null) [1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Missing_empty_or_whitespace_declaration_is_rejected(id: " \t") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.The_status_to_code_table_is_stable_and_documented [3 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Missing_empty_or_whitespace_declaration_is_rejected(id: "") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.The_work_record_round_trips_its_correlation_id_through_json [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Null_required_member_is_a_validation_error_not_a_null_reference(field: "itemDefinitions") [4 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Imported_provenance_fixture_is_valid_without_modification [2 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Null_required_member_is_a_validation_error_not_a_null_reference(field: "economy") [1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Invalid_integer_weight_is_controlled_and_other_defects_continue(weight: "1.5") [4 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Null_required_member_is_a_validation_error_not_a_null_reference(field: "npcModels") [4 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Invalid_integer_weight_is_controlled_and_other_defects_continue(weight: "9223372036854775808") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Invalid_integer_weight_is_controlled_and_other_defects_continue(weight: "null") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Null_required_member_is_a_validation_error_not_a_null_reference(field: "fixtures") [1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Invalid_integer_weight_is_controlled_and_other_defects_continue(weight: "\"10000\"") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Negative_weight_is_rejected_even_when_total_is_10000 [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Null_required_member_is_a_validation_error_not_a_null_reference(field: "lootPools") [1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Independent_broken_references_include_referrer_and_target [1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Duplicate_json_member_cannot_hide_a_reference [1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Duplicate_root_collection_does_not_hide_its_declared_items [1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Cross_file_cross_type_duplicates_use_one_global_namespace [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Zero_weights_and_repeated_references_are_valid [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Null_required_member_is_a_validation_error_not_a_null_reference(field: "products") [8 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.The_table_and_its_documentation_agree [18 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Invalid_pool_total_names_the_pool_entries_and_actual_total(total: 10001) [1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.The_503_documented_error_carries_its_table_code [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Invalid_pool_total_names_the_pool_entries_and_actual_total(total: 9999) [1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Unparseable_version_names_the_field_and_offending_value(value: "0.1.2") [1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Unparseable_version_names_the_field_and_offending_value(value: "-1.2") [1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Unparseable_version_names_the_field_and_offending_value(value: "") [1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Unparseable_version_names_the_field_and_offending_value(value: "1. 2") [1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Unparseable_version_names_the_field_and_offending_value(value: "0") [1 ms]
+[xUnit.net 00:00:00.58]   Discovered:  CurioDistrict.Tests.Integration
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Unparseable_version_names_the_field_and_offending_value(value: "bad-version") [1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Serializer_options_cannot_introduce_hidden_mutable_loader_state [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Malformed_or_nonobject_document_returns_a_descriptive_validation_failure(json: "[]") [1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Malformed_or_nonobject_document_returns_a_descriptive_validation_failure(json: "null") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Malformed_or_nonobject_document_returns_a_descriptive_validation_failure(json: "{") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Missing_version_is_rejected_even_when_source_metadata_has_a_version [2 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Profile_cannot_redefine_basis_points_to_make_an_invalid_pool_pass [11 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.An_unhandled_exception_returns_500_with_the_envelope_and_leaks_nothing [28 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Negative_cost_names_the_product_and_exact_cost_field(field: "supplierCost") [1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.Multiple_correlation_headers_and_an_oversized_id_generate_a_new_id [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Api.ErrorEnvelopeTests.A_healthy_200_response_passes_through_the_middleware_untouched [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Negative_cost_names_the_product_and_exact_cost_field(field: "maxPrice") [1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Negative_cost_names_the_product_and_exact_cost_field(field: "recommendedPrice") [1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Negative_cost_names_the_product_and_exact_cost_field(field: "minPrice") [1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Two_profile_versions_load_through_one_loader_and_report_explicit_versions [1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Multiple_semantic_defects_are_all_reported_in_one_deterministic_result [2 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Unresolved_sku_names_the_referring_pool_field_and_missing_id [1 ms]
+[xUnit.net 00:00:00.63]   Starting:    CurioDistrict.Tests.Integration
+[xUnit.net 00:00:00.77]   Finished:    CurioDistrict.Tests.Unit
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Imported_card_weights_match_the_final_source_correction [2 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Negative_weight_is_rejected_even_when_total_is_10000 [1 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Actual_imported_seed_loads_cleanly_and_repeated_loads_are_structurally_equal [14 ms]
+  Passed CurioDistrict.Tests.Unit.Config.SeedLoaderTests.Zero_weight_is_accepted_when_pool_total_remains_exactly_10000 [2 ms]
+
+Test Run Successful.
+Total tests: 133
+     Passed: 133
+ Total time: 1.7135 Seconds
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:63453
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\integration\bin\Release\net10.0
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:63454
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\integration\bin\Release\net10.0
+fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]
+      Health check postgres with status Unhealthy completed after 1.0321ms with message 'No connection string named 'CurioDistrict' is configured - the API cannot reach Postgres.'
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed CurioDistrict.Tests.Integration.Content.ContentValidatorProcessTests.Invalid_usage_exits_two(args: ["--unknown"]) [315 ms]
+  Passed CurioDistrict.Tests.Integration.Content.ContentValidatorProcessTests.Invalid_usage_exits_two(args: ["--file"]) [106 ms]
+  Passed CurioDistrict.Tests.Integration.Content.ContentValidatorProcessTests.Invalid_usage_exits_two(args: []) [99 ms]
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.A_successful_body_and_headers_pass_through_the_real_host [131 ms]
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.The_exception_route_returns_the_documented_envelope_for_each_status(status: 400, expectedCode: "bad_request") [31 ms]
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.The_exception_route_returns_the_documented_envelope_for_each_status(status: 422, expectedCode: "unprocessable_request") [2 ms]
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.The_exception_route_returns_the_documented_envelope_for_each_status(status: 401, expectedCode: "unauthorized") [2 ms]
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.The_exception_route_returns_the_documented_envelope_for_each_status(status: 403, expectedCode: "forbidden") [2 ms]
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.The_exception_route_returns_the_documented_envelope_for_each_status(status: 409, expectedCode: "conflict") [2 ms]
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.Malformed_multiple_and_oversized_headers_generate_safe_ids_on_Kestrel [6 ms]
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.The_health_503_is_the_documented_envelope_with_a_correlation_id [33 ms]
+  Passed CurioDistrict.Tests.Integration.Content.ContentValidatorProcessTests.Unreadable_and_malformed_files_do_not_hide_other_failures [194 ms]
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.A_status_only_body_is_normalized_before_Kestrel_commits_it(status: 409, expectedCode: "conflict") [4 ms]
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.A_status_only_body_is_normalized_before_Kestrel_commits_it(status: 403, expectedCode: "forbidden") [2 ms]
+fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]
+      Health check postgres with status Unhealthy completed after 0.0496ms with message 'No connection string named 'CurioDistrict' is configured - the API cannot reach Postgres.'
+fail: Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService[103]
+      Health check postgres with status Unhealthy completed after 0.0148ms with message 'No connection string named 'CurioDistrict' is configured - the API cannot reach Postgres.'
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.A_status_only_body_is_normalized_before_Kestrel_commits_it(status: 400, expectedCode: "bad_request") [1 ms]
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.A_status_only_body_is_normalized_before_Kestrel_commits_it(status: 503, expectedCode: "service_unavailable") [1 ms]
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.A_status_only_body_is_normalized_before_Kestrel_commits_it(status: 422, expectedCode: "unprocessable_request") [2 ms]
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.A_status_only_body_is_normalized_before_Kestrel_commits_it(status: 401, expectedCode: "unauthorized") [2 ms]
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.Routing_and_other_error_statuses_use_the_envelope(method: "GET", path: "/missing-route", status: 404, code: "not_found") [4 ms]
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.Routing_and_other_error_statuses_use_the_envelope(method: "GET", path: "/test/status-only/418", status: 418, code: "http_error") [2 ms]
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.Routing_and_other_error_statuses_use_the_envelope(method: "POST", path: "/test/success", status: 405, code: "method_not_allowed") [6 ms]
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.An_inbound_correlation_id_is_echoed_in_header_and_envelope_on_the_real_host [4 ms]
+  Passed CurioDistrict.Tests.Integration.Worker.WorkerDispatchProcessTests.A_separate_worker_process_logs_the_http_requests_correlation_id(suppliedId: "corr-ac4-process-1", malformedFirst: False) [772 ms]
+fail: CurioDistrict.API.Middleware.ExceptionHandlingMiddleware[0]
+      Unhandled fault on /test/unhandled-fault - correlation f17ba06a902d4e3284e2096f2067b5d0
+      System.InvalidOperationException: CURIODISTRICT_HOST_FAULT_MARKER_7c2e host fault at some frame
+         at CurioDistrict.Tests.Integration.Api.TestOnlyResponders.<>c.<MapTestOnlyResponders>b__0_3(HttpContext context) in C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\integration\api\error_envelope_host_test.cs:line 297
+         at CurioDistrict.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\API\Middleware\ExceptionHandlingMiddleware.cs:line 36
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:63459
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\integration\bin\Release\net10.0
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:63463
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\integration\bin\Release\net10.0
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.A_missing_inbound_correlation_id_is_generated_and_echoed_on_the_real_host [3 ms]
+  Passed CurioDistrict.Tests.Integration.Api.ErrorEnvelopeHostTests.The_unhandled_fault_returns_500_envelope_and_the_marker_leaks_nowhere [22 ms]
+  Passed CurioDistrict.Tests.Integration.Content.ContentValidatorProcessTests.Multiple_semantic_defects_exit_one_and_all_appear_deterministically [313 ms]
+  Passed CurioDistrict.Tests.Integration.Worker.WorkerDispatchProcessTests.A_separate_worker_process_logs_the_http_requests_correlation_id(suppliedId: "corr-after-malformed-frame", malformedFirst: True) [383 ms]
+  Passed CurioDistrict.Tests.Integration.Content.ContentValidatorProcessTests.Valid_content_exits_zero_and_reports_four_pools [134 ms]
+  Passed CurioDistrict.Tests.Integration.Worker.WorkerDispatchProcessTests.A_separate_worker_process_logs_the_http_requests_correlation_id(suppliedId: null, malformedFirst: False) [356 ms]
+  Passed CurioDistrict.Tests.Integration.Fnd.PostgresReadinessCheckIntegrationTests.An_unreachable_postgres_is_unhealthy_inside_the_probe_budget [2 s]
+  Passed CurioDistrict.Tests.Integration.Fnd.PostgresReadinessCheckIntegrationTests.A_silent_postgres_answers_on_the_probe_deadline_not_the_driver_timer [2 s]
+  Passed CurioDistrict.Tests.Integration.Fnd.PostgresReadinessCheckIntegrationTests.A_slow_probe_is_cancelled_and_its_fault_is_observed_without_extending_the_budget [2 s]
+[xUnit.net 00:00:06.98]     CurioDistrict.Tests.Integration.Fnd.PostgresReadinessCheckIntegrationTests.A_live_postgres_answers_healthy [SKIP]
+[xUnit.net 00:00:06.98]       No CURIODISTRICT_TEST_DB_CONNECTION_STRING — set it to a live Postgres to exercise the healthy path.
+[xUnit.net 00:00:06.98]   Finished:    CurioDistrict.Tests.Integration
+  Skipped CurioDistrict.Tests.Integration.Fnd.PostgresReadinessCheckIntegrationTests.A_live_postgres_answers_healthy [1 ms]
+
+Test Run Successful.
+Total tests: 33
+     Passed: 32
+    Skipped: 1
+ Total time: 7.8640 Seconds
+TEST_NATIVE_EXIT=0

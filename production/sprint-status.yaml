@@ -1,0 +1,27 @@
+# Generated via existing sprint-plan under standing autonomous authorization.
+# Sprint001 completed evidence remains in its plan/QA/retro and integration receipt.
+sprint: 3
+goal: "Content-set validator and PR workflow; final closure requires actual PR/CI evidence"
+start: "2026-11-11"
+end: null
+generated: "2026-11-11"
+updated: "2026-11-11"
+stories:
+  - id: "ep-core-009"
+    name: "Add content schema validation build script"
+    file: "production/epics/ep-core/story-009-content-schema-validation.md"
+    priority: must-have
+    status: in-progress
+    owner: "Codex scoped recovery; Claude stopped after tool failure"
+    estimate_days: null
+    blocker: ""
+    completed: ""
+  - id: "ep-core-005"
+    name: "Add CI pipeline for C# tests and Unity checks"
+    file: "production/epics/ep-core/story-005-ci-pipeline.md"
+    priority: must-have
+    status: in-progress
+    owner: "Codex exclusive workflow/helper recovery; Claude review only"
+    estimate_days: null
+    blocker: "Remote execution requires reviewed Git/PR authorization; local preparation is ready"
+    completed: ""

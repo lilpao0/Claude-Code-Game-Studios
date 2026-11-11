@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RootNamespace>CurioDistrict.Domain</RootNamespace>
+  </PropertyGroup>
+
+  <!--
+    ADR-0004: Domain references nothing but the BCL. This file must carry NO
+    PackageReference and NO ProjectReference. The module-boundary check
+    (backend/tools/module-boundary-check) fails the build if one is added.
+  -->
+
+</Project>

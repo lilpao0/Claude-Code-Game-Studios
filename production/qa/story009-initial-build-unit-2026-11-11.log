@@ -1,0 +1,81 @@
+  Determining projects to restore...
+  Restored C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\Tools\ContentValidator\ContentValidator.csproj (in 158 ms).
+  Restored C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\integration\CurioDistrict.Tests.Integration.csproj (in 1.6 sec).
+  Restored C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\CurioDistrict.Tests.Unit.csproj (in 1.64 sec).
+  5 of 8 projects are up-to-date for restore.
+  CurioDistrict.Config -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\Config\CurioDistrict.Config\bin\Release\net10.0\CurioDistrict.Config.dll
+  CurioDistrict.Domain -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\Domain\bin\Release\net10.0\CurioDistrict.Domain.dll
+  CurioDistrict.Data -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\Data\bin\Release\net10.0\CurioDistrict.Data.dll
+  CurioDistrict.Worker -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\Worker\bin\Release\net10.0\CurioDistrict.Worker.dll
+  CurioDistrict.API -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\API\bin\Release\net10.0\CurioDistrict.API.dll
+  ContentValidator -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\Tools\ContentValidator\bin\Release\net10.0\ContentValidator.dll
+C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\content\content_schema_test.cs(29,23): warning xUnit2031: Do not use a Where clause to filter before calling Assert.Single. Use the overload of Assert.Single that accepts a filtering function. (https://xunit.net/xunit.analyzers/rules/xUnit2031) [C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\CurioDistrict.Tests.Unit.csproj]
+C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\content\content_schema_test.cs(118,23): warning xUnit2031: Do not use a Where clause to filter before calling Assert.Single. Use the overload of Assert.Single that accepts a filtering function. (https://xunit.net/xunit.analyzers/rules/xUnit2031) [C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\CurioDistrict.Tests.Unit.csproj]
+C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\content\content_schema_test.cs(130,23): warning xUnit2031: Do not use a Where clause to filter before calling Assert.Single. Use the overload of Assert.Single that accepts a filtering function. (https://xunit.net/xunit.analyzers/rules/xUnit2031) [C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\CurioDistrict.Tests.Unit.csproj]
+  CurioDistrict.Tests.Integration -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\integration\bin\Release\net10.0\CurioDistrict.Tests.Integration.dll
+  CurioDistrict.Tests.Unit -> C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\bin\Release\net10.0\CurioDistrict.Tests.Unit.dll
+
+Build succeeded.
+
+C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\content\content_schema_test.cs(29,23): warning xUnit2031: Do not use a Where clause to filter before calling Assert.Single. Use the overload of Assert.Single that accepts a filtering function. (https://xunit.net/xunit.analyzers/rules/xUnit2031) [C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\CurioDistrict.Tests.Unit.csproj]
+C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\content\content_schema_test.cs(118,23): warning xUnit2031: Do not use a Where clause to filter before calling Assert.Single. Use the overload of Assert.Single that accepts a filtering function. (https://xunit.net/xunit.analyzers/rules/xUnit2031) [C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\CurioDistrict.Tests.Unit.csproj]
+C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\content\content_schema_test.cs(130,23): warning xUnit2031: Do not use a Where clause to filter before calling Assert.Single. Use the overload of Assert.Single that accepts a filtering function. (https://xunit.net/xunit.analyzers/rules/xUnit2031) [C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\CurioDistrict.Tests.Unit.csproj]
+    3 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:11.41
+BUILD_NATIVE_EXIT=0
+Test run for C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\bin\Release\net10.0\CurioDistrict.Tests.Unit.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.14)
+[xUnit.net 00:00:00.33]   Discovering: CurioDistrict.Tests.Unit
+[xUnit.net 00:00:00.41]   Discovered:  CurioDistrict.Tests.Unit
+[xUnit.net 00:00:00.45]   Starting:    CurioDistrict.Tests.Unit
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Missing_or_fifth_pool_is_rejected(count: 5) [280 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Missing_or_fifth_pool_is_rejected(count: 3) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Bad_document_does_not_hide_other_document_defects [3 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Malformed_or_unsupported_input_never_silently_passes(json: "null") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Malformed_or_unsupported_input_never_silently_passes(json: "[]") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Malformed_or_unsupported_input_never_silently_passes(json: "{\"unknownReferences\":[\"missing\"]}") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Malformed_or_unsupported_input_never_silently_passes(json: "{\"itemDefinitions\":[{\"definitionId\":\"a\",\"re"···) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Malformed_or_unsupported_input_never_silently_passes(json: "{\"itemDefinitions\":[null]}") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Malformed_or_unsupported_input_never_silently_passes(json: "{\"itemDefinitions\":[{\"definitionId\":\"a\",\"ou"···) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Malformed_or_unsupported_input_never_silently_passes(json: "{") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Malformed_or_unsupported_input_never_silently_passes(json: "{\"itemDefinitions\":[{\"definitionId\":5}]}") [1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Malformed_or_unsupported_input_never_silently_passes(json: "{\"lootPools\":null}") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Same_file_duplicate_identifies_both_declarations [1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Every_reference_family_resolves_across_files [2 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.All_defects_are_grouped_and_order_is_source_and_culture_independent [29 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Invalid_total_names_the_pool_and_observed_total(total: 10001) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Invalid_total_names_the_pool_and_observed_total(total: 9999) [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Missing_empty_or_whitespace_declaration_is_rejected(id: null) [< 1 ms]
+[xUnit.net 00:00:00.83]       Assert.Contains() Failure: Filter not matched in collection
+[xUnit.net 00:00:00.83]       Collection: [ContentViolation { Kind = Schema, FilePath = ambiguous.json, JsonPath = $.itemDefinitions[0].references, Message = Duplicate JSON member is not supported. }]
+[xUnit.net 00:00:00.83]       Stack Trace:
+[xUnit.net 00:00:00.83]     CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Duplicate_json_member_cannot_hide_a_reference [FAIL]
+[xUnit.net 00:00:00.83]         C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\content\content_schema_test.cs(196,0): at CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Duplicate_json_member_cannot_hide_a_reference()
+[xUnit.net 00:00:00.83]            at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+[xUnit.net 00:00:00.83]            at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:00.84]   Finished:    CurioDistrict.Tests.Unit
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Missing_empty_or_whitespace_declaration_is_rejected(id: " \t") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Missing_empty_or_whitespace_declaration_is_rejected(id: "") [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Imported_provenance_fixture_is_valid_without_modification [4 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Negative_weight_is_rejected_even_when_total_is_10000 [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Independent_broken_references_include_referrer_and_target [6 ms]
+  Failed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Duplicate_json_member_cannot_hide_a_reference [2 ms]
+  Error Message:
+   Assert.Contains() Failure: Filter not matched in collection
+Collection: [ContentViolation { Kind = Schema, FilePath = ambiguous.json, JsonPath = $.itemDefinitions[0].references, Message = Duplicate JSON member is not supported. }]
+  Stack Trace:
+     at CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Duplicate_json_member_cannot_hide_a_reference() in C:\Users\lilpao0\.codex\worktrees\curio-sprint-001\Claude-Code-Game-Studios\backend\tests\unit\content\content_schema_test.cs:line 196
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Cross_file_cross_type_duplicates_use_one_global_namespace [< 1 ms]
+  Passed CurioDistrict.Tests.Unit.Content.ContentSchemaTests.Zero_weights_and_repeated_references_are_valid [< 1 ms]
+
+Test Run Failed.
+Total tests: 26
+     Passed: 25
+     Failed: 1
+ Total time: 1.6525 Seconds
+UNIT_NATIVE_EXIT=1

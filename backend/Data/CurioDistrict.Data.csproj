@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RootNamespace>CurioDistrict.Data</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- The integration suite reaches the check's internal probe seam so it
+         can exercise the probe's cancellation and fault lifecycle without a
+         live server. -->
+    <InternalsVisibleTo Include="CurioDistrict.Tests.Integration" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- ADR-0004: Data depends inward upon Domain. One direction only. -->
+    <ProjectReference Include="..\Domain\CurioDistrict.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The Postgres driver. It lives in Data, never in Domain: Domain is
+         BCL-only (ADR-0004, module-boundaries.md §2). -->
+    <PackageReference Include="Npgsql" Version="10.0.3" />
+    <!-- The IHealthCheck contract the readiness check implements. Abstractions
+         only — no hosting, no DI container. -->
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions" Version="10.0.14" />
+    <!-- IConfiguration / GetConnectionString — how the check learns which
+         connection string to probe. Abstractions only. -->
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Config\CurioDistrict.Config\CurioDistrict.Config.csproj" />
+  </ItemGroup>
+</Project>

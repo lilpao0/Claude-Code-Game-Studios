@@ -1,0 +1,87 @@
+name: Pull request checks
+
+'on':
+  pull_request:
+    types: [opened, synchronize, reopened, edited, ready_for_review]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Backend build and tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.403'
+      - name: Build backend
+        run: dotnet build backend/CurioDistrict.sln --configuration Release --nologo
+      - name: Unit tests and module boundaries
+        run: dotnet test backend/tests/unit/CurioDistrict.Tests.Unit.csproj --configuration Release --no-build --logger 'console;verbosity=normal'
+      - name: Integration and actual CLI process tests
+        run: dotnet test backend/tests/integration/CurioDistrict.Tests.Integration.csproj --configuration Release --no-build --logger 'console;verbosity=normal'
+
+  content:
+    name: Content validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.403'
+      - name: Validate the selected content set
+        run: dotnet run --project backend/Tools/ContentValidator/ContentValidator.csproj --configuration Release -- --file backend/Config/CurioDistrict.Config/profiles/dev-seed.v0.1.json
+
+  governance:
+    name: Traceability and Unity eligibility
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      unity_enabled: ${{ steps.unity.outputs.unity_enabled }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install the pinned YAML reader
+        run: python -m pip install --disable-pip-version-check -r .github/scripts/requirements-ci.txt
+      - name: Validate the PR body as data
+        run: python .github/scripts/check-pr-event.py
+      - name: Workflow and Unity preflight controls
+        run: python -m unittest discover -s backend/tests/integration/ci -p 'test_*.py' -v
+      - name: Check current Unity eligibility
+        id: unity
+        run: python .github/scripts/unity-ci.py preflight
+
+  unity:
+    name: Unity compilation (ADR-0022 Proposed / FND-003 blocked until closed)
+    needs: governance
+    if: needs.governance.outputs.unity_enabled == 'true'
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install the pinned YAML reader
+        run: python -m pip install --disable-pip-version-check -r .github/scripts/requirements-ci.txt
+      - name: Invoke project.yaml commands.smoke
+        shell: bash
+        run: python .github/scripts/unity-ci.py run
